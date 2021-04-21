@@ -6,7 +6,9 @@ node{
 		checkout scm
 	}
         stage('Mvn Package'){
-		bat "sample.bat"
+		def mvnHome = tool name: 'Maven', type: 'maven'
+		def mvnCMD = "${mvnHome}/bin/mvn"
+		bat "${mvnCMD} clean package"
 	}
 
         
