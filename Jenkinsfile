@@ -3,7 +3,7 @@ node{
 	
 		echo "Checking out from Git Repo";
 		//git 'https://github.com/Niha-21/tycompwebapp.git'
-		scm checkout
+		checkout scm
 	}
         stage('Mvn Package'){
 		def mvnHome = tool name: 'Maven', type: 'maven'
